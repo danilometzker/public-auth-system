@@ -29,4 +29,18 @@ Após seguir estes passos você poderá prosseguir e implementar o sistema com s
 <hr>
 
 <h2>2. Funções</h2>
-<h3>2.1 - Como registrar um usuário</h3>
+<h3>2.1 - Chamando a classe</h3>
+Tendo em mãos os dados do seu banco de dados (host, nome de usuario, senha e nome do banco de dados) você irá iniciar o uso da classe.
+<pre>
+&lt;php
+require_once 'lib/AuthSystem.class.php';
+
+$auth = new AuthSystem("localhost", "username", "password", "database");
+&gt;
+</pre>
+"localhost" = Endereço do seu servidor MySQL;
+"username" = Nome de usuário do seu banco de dados;
+"password" = Senha de acesso ao seu banco de dados;
+"database" = Nome que você deu ao seu banco de dados (geralmente, o nome é igual ao nome de usuário [em casos de hospedagem de sites comuns]);
+<h3>2.2 - Como registrar um usuário</h3>
+A função para
