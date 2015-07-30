@@ -66,12 +66,13 @@ class AuthSystem{
 
 			$token = $random1.$random2;
 
+			// a chance in a million of 2 users has same token, so, returns false for prevention
+			// há uma chance em um milhão de 2 usuarios pegarem o mesmo token, então o registro é cancelado por prevenção
 			$query2 = mysqli_query($this->nexus, "SELECT token FROM Usuarios WHERE token = '$token'");
-
 			if(mysqli_num_rows($query2) == 0){
 
 				$sql_insert = "INSERT INTO Usuarios(email, username, password, token, ip)
-								        VALUES ('$email', '$name', '$hashpass', '$token', '$ip')";
+						VALUES ('$email', '$name', '$hashpass', '$token', '$ip')";
 				$insert_data = mysqli_query($this->nexus, $sql_insert);
 
 				if($insert_data){
