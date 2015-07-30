@@ -11,4 +11,4 @@ Coloque este arquivo em alguma pasta do seu site. Para usá-lo em uma página ph
 <pre><i>require_once 'pasta/AuthSystem.class.php';</i></pre>
 Mude o 'pasta' para onde estiver sua classe.
 
-Veja a <a href="#">documentação</a> para obter ajuda.
+Veja a <a href="https://github.com/DMZK/public-auth-system/blob/master/docs/uso.pt-br.txt">documentação</a> para obter ajuda.
