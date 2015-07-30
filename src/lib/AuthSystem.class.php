@@ -9,7 +9,7 @@
 
 /* Tables > Columns
 Users >
-id(A.I | P.K) | email(varchar[255]) | username(varchar[255]) | password(varchar[255]) | token(varchar[255]) | ip(varchar[255])
+id(A.I | P.K) | email(varchar[255]) | username(varchar[255]) | password(varchar[255]) | token(varchar[255])
 
 */
 
@@ -48,7 +48,7 @@ class AuthSystem{
 
 	/* Register a user (sign up) */
 	/* Registra usuário */
-	public function userRegister($email, $name, $pass, $ip){
+	public function userRegister($email, $name, $pass){
 
 
 
@@ -71,8 +71,8 @@ class AuthSystem{
 			$query2 = mysqli_query($this->nexus, "SELECT token FROM Usuarios WHERE token = '$token'");
 			if(mysqli_num_rows($query2) == 0){
 
-				$sql_insert = "INSERT INTO Usuarios(email, username, password, token, ip)
-						VALUES ('$email', '$name', '$hashpass', '$token', '$ip')";
+				$sql_insert = "INSERT INTO Usuarios(email, username, password, token)
+						VALUES ('$email', '$name', '$hashpass', '$token')";
 				$insert_data = mysqli_query($this->nexus, $sql_insert);
 
 				if($insert_data){
