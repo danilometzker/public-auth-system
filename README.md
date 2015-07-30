@@ -6,7 +6,9 @@ Licença: GNU GPL v.2
 <hr>
 
 <h2>Como usar:</h2>
-Você só precisará do arquivo <em>lib/AuthSystem.class.php</em>.
+Você só precisará do arquivo <em>lib/AuthSystem.class.php</em>.<br>
 Coloque este arquivo em alguma pasta do seu site. Para usá-lo em uma página php, lembre-se de incluir a classe no codigo.
-<pre><i>require_once 'pasta/AuthSystem.class.php';</i>
+<pre><i>require_once 'pasta/AuthSystem.class.php';</i></pre>
 Mude o 'pasta' para onde estiver sua classe.
+
+Veja a <a href="#">documentação</a> para obter ajuda.
