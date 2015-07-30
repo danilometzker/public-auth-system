@@ -38,9 +38,9 @@ require_once 'lib/AuthSystem.class.php';
 $auth = new AuthSystem("localhost", "username", "password", "database");
 &gt;
 </pre>
-"localhost" = Endereço do seu servidor MySQL;
-"username" = Nome de usuário do seu banco de dados;
-"password" = Senha de acesso ao seu banco de dados;
-"database" = Nome que você deu ao seu banco de dados (geralmente, o nome é igual ao nome de usuário [em casos de hospedagem de sites comuns]);
+Onde: <br>
+"localhost" = Endereço do seu servidor MySQL;<br>
+"username" = Nome de usuário do seu banco de dados;<br>
+"password" = Senha de acesso ao seu banco de dados;<br>
+"database" = Nome que você deu ao seu banco de dados (geralmente, o nome é igual ao nome de usuário [em casos de hospedagem de sites comuns]);<br>
 <h3>2.2 - Como registrar um usuário</h3>
-A função para
