@@ -36,7 +36,7 @@ Tendo em mãos os dados do seu banco de dados (host, nome de usuario, senha e no
 require_once 'lib/AuthSystem.class.php';
 
 $auth = new AuthSystem("localhost", "username", "password", "database");
-&gt;
+?&gt;
 </pre>
 Onde: <br>
 "localhost" = Endereço do seu servidor MySQL;<br>
