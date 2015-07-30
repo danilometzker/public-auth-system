@@ -26,3 +26,7 @@ CREATE TABLE users (
 </pre>
 
 Após seguir estes passos você poderá prosseguir e implementar o sistema com sucesso em seu site.
+<hr>
+
+<h2>2. Funções</h2>
+<h3>2.1 - Como registrar um usuário</h3>
