@@ -12,4 +12,17 @@ Coloque este arquivo em alguma pasta do seu site. Para usá-lo em uma página ph
 <pre>&lt;?php require_once 'lib/AuthSystem.class.php'; ?&gt;</pre>
 "lib" é a pasta onde se encontra a classe, você pode alterar isto.
   
-Agora você precisa criar um banco de dados MySQL para que o sistema possa funcionar.
+Agora você precisa criar um banco de dados MySQL para que o sistema possa funcionar.<br>
+Tendo um banco de dados MySQL criado, você terá que criar a tabela onde serão guardados os dados dos usuários. Simplesmente importe <a href="https://github.com/DMZK/public-auth-system/blob/master/src/sql/table.sql">esta tabela</a> no seu servidor MySQL como o phpmyadmin ou crie-a manualmente com o mesmo codigo deste arquivo:
+<pre>
+CREATE TABLE users (
+  id INT NOT NULL auto_increment,
+  email VARCHAR(255),
+  username VARCHAR(255),
+  password VARCHAR(255),
+  token VARCHAR(255),
+  primary KEY (id)
+);
+</pre>
+
+Após seguir estes passos você poderá prosseguir e implementar o sistema com sucesso em seu site.
