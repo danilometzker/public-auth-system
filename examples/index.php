@@ -12,11 +12,11 @@
   
   <?php if($auth->isLogged()): /* caso usuario esteja logado */?>
   
-  <h1>Seja bem vindo <?php $auth->getName(true); ?>!</h1>
+  <h2>Seja bem vindo <?php $auth->getName(true); ?>!</h2>
   
   <?php else: /* caso usuario nao esteja logado */ ?>
   
-  <h1>Olá visitante, você não está logado ainda.</h1>
+  <h2>Olá visitante, você não está logado ainda.</h2>
   Faça login clicando <a href="login.php">aqui</a> ou Registre-se clicando <a href="register.php">aqui</a>.
   
   <?php endif; ?>
