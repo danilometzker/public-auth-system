@@ -2,45 +2,38 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<title>Register Example / Exemplo de Registro</title>
+	<title>Sign in Example / Exemplo de Login</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Register Example / Exemplo de Registro</h1>
+  <h1>Sign in Example / Exemplo de Login</h1>
   
   <?php
   $auth = new AuthSystem("localhost", "root", "", "usuarios"); //host, username, password, database name
   
-  if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_password'])){
-    $email = $_POST['email'];
+  if(isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm_password'];
-    
-    if($password == $confirm_password){
+    $mode = (!isset($_POST['cookie_on'])) ? false : true;
       
-      $register = $auth->userRegister($email, $username, $password);
+    $login = $auth->userLogin($username, $password, $mode);
       
-      if($register){
-        echo "<script>alert(\"Registrado com sucesso!\"); window.location.href = 'login.php';</script>";
-      }else{
-        echo "<script>alert(\"Email ou Username já registrado!\");</script>";
-      }
-      
+    if($login){
+      echo "<script>alert(\"Logado com sucesso!\"); window.location.href = 'index.php';</script>";
     }else{
-      echo "<script>alert(\"As senhas não confirmam!\");</script>";
+      echo "<script>alert(\"Dados incorretos!\");</script>";
     }
+      
   }
   
   ?>
   
   <form method="post">
-    <input type="email" placeholder="Insira seu email" required name="email">
     <input type="text" placeholder="Insira seu username" required name="username">
     <input type="password" placeholder="Insira sua senha" required name="password">
-    <input type="password" placeholder="Confirme sua senha" required name="confirm_password">
+    <input type="checkbox" name="cookie_on" id="cookie_on"> <label for="cookie_on">Continuar conectado</label>
     
-    <button type="submit">Registrar-se</button>
+    <button type="submit">Logar-se</button>
   </form>
 
 </body>
