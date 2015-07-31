@@ -1,6 +1,6 @@
 <?php
 require_once 'lib/AuthSystem.class.php';
-$auth = new AuthSystem("localhost", "root", "", "usuarios"); /*host, username, password, database name*/
+$auth = new AuthSystem("localhost", "root", "", "database"); /*host, username, password, database name*/
 
 $logout = $auth->logout();
 if($logout){
