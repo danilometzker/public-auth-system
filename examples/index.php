@@ -12,10 +12,12 @@ $auth = new AuthSystem("localhost", "root", "", "usuarios"); /*host, username, p
 </head>
 <body>
   <h1>Sign in Example / Exemplo de Login</h1>
+
   
-  <?php if($auth->isLogged()): /* caso usuario esteja logado */?>
+  <?php if($isLogged = $auth->isLogged()): /* caso usuario esteja logado */ ?>
   
   <h2>Seja bem vindo <?php $auth->getName(true); ?>!</h2>
+  Clique <a href="sair.php">aqui</a> para fazer logout.
   
   <?php else: /* caso usuario nao esteja logado */ ?>
   
