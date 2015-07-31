@@ -8,7 +8,7 @@
 
 
 /* Tables > Columns
-Users >
+users >
 id(A.I | P.K) | email(varchar[255]) | username(varchar[255]) | password(varchar[255]) | token(varchar[255])
 
 */
@@ -53,7 +53,7 @@ class AuthSystem{
 
 
     //verify existing user
-		$sql = "SELECT * FROM Users WHERE email = '$email' or username = '$name'";
+		$sql = "SELECT * FROM users WHERE email = '$email' or username = '$name'";
 		$query = mysqli_query($this->nexus, $sql);
 
 		if(mysqli_num_rows($query) > 0){
@@ -68,10 +68,10 @@ class AuthSystem{
 
 			// a chance in a million of 2 users has same token, so, returns false for prevention
 			// há uma chance em um milhão de 2 usuarios pegarem o mesmo token, então o registro é cancelado por prevenção
-			$query2 = mysqli_query($this->nexus, "SELECT token FROM Usuarios WHERE token = '$token'");
+			$query2 = mysqli_query($this->nexus, "SELECT token FROM users WHERE token = '$token'");
 			if(mysqli_num_rows($query2) == 0){
 
-				$sql_insert = "INSERT INTO Usuarios(email, username, password, token)
+				$sql_insert = "INSERT INTO users(email, username, password, token)
 						VALUES ('$email', '$name', '$hashpass', '$token')";
 				$insert_data = mysqli_query($this->nexus, $sql_insert);
 
@@ -91,19 +91,20 @@ class AuthSystem{
 	/* Logs a user (sign in) */
 	/* Efetua login de usuário */
 	public function userLogin($name, $pass, $mode = false){
+			session_start();
 
 			$name = mysqli_real_escape_string($this->nexus, $name);
 			$pass = mysqli_real_escape_string($this->nexus, $pass);
 
 			$hashpass = $this->salt . sha1(md5($pass));
 
-			$sql = "SELECT * FROM Usuarios WHERE username = '$name' and password = '$hashpass'";
+			$sql = "SELECT * FROM users WHERE username = '$name' and password = '$hashpass'";
 			$query = mysqli_query($this->nexus, $sql);
 
 			$hashname = base64_encode($name);
 
 			if(mysqli_num_rows($query) > 0){
-				if($mode === true){
+				if($mode == true){
 					/* Login with cookies */
 					setcookie("user", $hashname, time()+3600*24*30);
 					return true;
@@ -120,6 +121,7 @@ class AuthSystem{
 	/* Is logged verification */
 	/* Verifica se usuário está logado */
 	public function isLogged(){
+		session_start();
 		if(isset($_SESSION['user']) || isset($_COOKIE['user'])){
             return true;
         }else{
@@ -129,8 +131,8 @@ class AuthSystem{
 
 	/* Logout a user */
 	/* Desloga o usuário */
-	public function logout()
-    {
+	public function logout(){
+		session_start();
         if(isset($_SESSION['user'])){
             session_destroy();
             return true;
