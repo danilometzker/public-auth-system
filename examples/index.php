@@ -1,4 +1,7 @@
-<?php $auth = new AuthSystem("localhost", "root", "", "usuarios"); /*host, username, password, database name*/ ?>
+<?php
+require_once 'lib/AuthSystem.class.php';
+$auth = new AuthSystem("localhost", "root", "", "usuarios"); /*host, username, password, database name*/
+?>
 
 <!DOCTYPE html>
 <html>
