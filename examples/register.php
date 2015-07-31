@@ -1,3 +1,8 @@
+<?php
+require_once 'lib/AuthSystem.class.php';
+$auth = new AuthSystem("localhost", "root", "", "usuarios"); /*host, username, password, database name*/
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +14,6 @@
   <h1>Register Example / Exemplo de Registro</h1>
   
   <?php
-  $auth = new AuthSystem("localhost", "root", "", "usuarios"); //host, username, password, database name
   
   if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['confirm_password'])){
     $email = $_POST['email'];
