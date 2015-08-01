@@ -44,3 +44,6 @@ Onde: <br>
 "password" = Senha de acesso ao seu banco de dados;<br>
 "database" = Nome que você deu ao seu banco de dados (geralmente, o nome é igual ao nome de usuário [em casos de hospedagem de sites comuns]);<br>
 <h3>2.2 - Como registrar um usuário</h3>
+A função usada para registrar usuários é:
+<pre>userRegister($email, $name, $pass); </pre>
+Onde <b style="background:rgba(0,0,0,0.2)">$email</b> é o email do usuario a ser registrado, <b style="background:rgba(0,0,0,0.2)">$name</b> é o nome de usuário, e <b style="background:rgba(0,0,0,0.2)">$pass</b> é a senha de acesso.
