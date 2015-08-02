@@ -57,4 +57,11 @@ A função usada para verificar se o usuário está logado é:
 <pre>isLogged();</pre>
 Esta função é bastante simples e retornará true ou false.<br>Caso seja <b>true</b>, significa que o usuário está logado, e caso seja <b>false</b>, o usuário não está logado.
 <h4>-------- Exibindo dados apenas para quem estiver logado</h4>
+<em>Você pode usar como exemplo, esta página: <a href="https://github.com/DMZK/public-auth-system/blob/master/examples/index.php">index.php</a>.<em><br>
+<hr>
+<h3>2.4 - Como exibir o nome de usuário</h3>
+A função para exibir o nome do usuário logado é:
+<pre>getName(true);</pre>ou<pre>getName(false);</pre>
+Onde <b>true</b> faz a função exibir automaticamente o nome.<br>E <b>false</b> apenas retorna o nome do usuário e você terá que exibi-lo com echo, printf e etc.<br>
+<a href="https://github.com/DMZK/public-auth-system/blob/master/examples/index.php">Exemplo</a><br>
 <hr>
