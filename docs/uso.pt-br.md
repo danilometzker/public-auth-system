@@ -76,3 +76,4 @@ Esta função não possui parametros e retornará <b>false</b> caso o visitante 
 <a href="https://github.com/DMZK/public-auth-system/blob/master/examples/sair.php">Exemplo</a><br>
 <hr><hr><hr>
 <b>A partir desta documentação e com os exemplos é possível implementar este sistema de autenticação sem problema algum!</b>
+<br><em>Caso tenha alguma dificuldade ou descobriu algum erro, não deixe de reportá-lo a partir <a href="https://github.com/DMZK/public-auth-system/issues">deste link</a>.
