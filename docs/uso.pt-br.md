@@ -71,7 +71,7 @@ Onde <b>true</b> faz a função exibir automaticamente o nome.<br>E <b>false</b>
 <hr>
 <h3>2.5 - Como efetuar logout(deslogar)</h3>
 A função usada para deslogar é:
-<pre>logout()</pre>
+<pre>logout();</pre>
 Esta função não possui parametros e retornará <b>false</b> caso o visitante não estiver logado.<br>
 <a href="https://github.com/DMZK/public-auth-system/blob/master/examples/sair.php">Exemplo</a><br>
 <hr><hr><hr>
