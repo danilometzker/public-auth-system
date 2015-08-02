@@ -46,12 +46,16 @@ Onde: <br>
 <h3>2.2 - Como registrar um usuário</h3>
 A função usada para registrar usuários é:
 <pre>userRegister($email, $name, $pass); </pre>
-Onde <b style="background:rgba(0,0,0,0.2)">$email</b> é o email do usuario a ser registrado, <b style="background:rgba(0,0,0,0.2)">$name</b> é o nome de usuário, e <b style="background:rgba(0,0,0,0.2)">$pass</b> é a senha de acesso.<br>Esta função irá retornar <i>true</i> ou <i>false</i>, caso seja true, significa que o usuário foi registrado com sucesso, caso seja false, ocorreu um erro ao registrar o usuário ou já existe outro usuário com o mesmo email ou mesmo nome no banco de dados.<br><hr>
+Onde <b style="background:rgba(0,0,0,0.2)">$email</b> é o email do usuario a ser registrado, <b style="background:rgba(0,0,0,0.2)">$name</b> é o nome de usuário, e <b style="background:rgba(0,0,0,0.2)">$pass</b> é a senha de acesso.<br>Esta função irá retornar <i>true</i> ou <i>false</i>, caso seja true, significa que o usuário foi registrado com sucesso, caso seja false, ocorreu um erro ao registrar o usuário ou já existe outro usuário com o mesmo email ou mesmo nome no banco de dados.<br>
+<a href="https://github.com/DMZK/public-auth-system/blob/master/examples/register.php">Exemplo</a><br>
+<hr>
 <h3>Como efetuar login</h3>
 A função usada para logar-se é:
 <pre>userLogin($name, $pass, true);</pre>ou<pre>userLogin($name, $pass, false);</pre>
 Onde <b>$name</b> é o nome de usuário, <b>$pass</b> é a senha de acesso, e <b>true</b>/<b>false</b> é o modo como ele será logado (cookies ou sessions).<br><b>true</b> equivale a login com cookies (o usuário permanecerá logado durante um mês, mesmo fechando o navegador).<br><b>false</b> equivale a login com sessions (o usuário ficará logado apenas enquanto o navegador estiver aberto).<br>
-Esta função retornará <i>true</i> ou <i>false</i>, caso seja true, significa que o usuário efetuou login com sucesso, caso seja false, os dados de acesso estão incorretos.<br><hr>
+Esta função retornará <i>true</i> ou <i>false</i>, caso seja true, significa que o usuário efetuou login com sucesso, caso seja false, os dados de acesso estão incorretos.<br>
+<a href="https://github.com/DMZK/public-auth-system/blob/master/examples/login.php">Exemplo</a><br>
+<hr>
 <h3>2.3 - Como checar se o usuário está logado</h3>
 A função usada para verificar se o usuário está logado é:
 <pre>isLogged();</pre>
@@ -65,3 +69,10 @@ A função para exibir o nome do usuário logado é:
 Onde <b>true</b> faz a função exibir automaticamente o nome.<br>E <b>false</b> apenas retorna o nome do usuário e você terá que exibi-lo com echo, printf e etc.<br>
 <a href="https://github.com/DMZK/public-auth-system/blob/master/examples/index.php">Exemplo</a><br>
 <hr>
+<h3>2.5 - Como efetuar logout(deslogar)</h3>
+A função usada para deslogar é:
+<pre>logout()</pre>
+Esta função não possui parametros e retornará <b>false</b> caso o visitante não estiver logado.<br>
+<a href="https://github.com/DMZK/public-auth-system/blob/master/examples/sair.php">Exemplo</a><br>
+<hr><hr><hr>
+<b>A partir desta documentação e com os exemplos é possível implementar este sistema de autenticação sem problema algum!</b>
