@@ -56,4 +56,4 @@ Esta função retornará <i>true</i> ou <i>false</i>, caso seja true, significa 
 A função usada para verificar se o usuário está logado é:
 <pre>isLogged();</pre>
 Esta função é bastante simples e retornará true ou false.<br>Caso seja <b>true</b>, significa que o usuário está logado, e caso seja <b>false</b>, o usuário não está logado.
-<h4>2.3.2 - Exibindo dados apenas para quem estiver logado</h4>
+<h4>-------- Exibindo dados apenas para quem estiver logado</h4>
