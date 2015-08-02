@@ -24,7 +24,7 @@ CREATE TABLE users (
   primary KEY (id)
 );
 </pre>
-<em>Por enquanto a tabela precisa necessariamente se chamar "users"</em>.
+<em>Por enquanto a tabela precisa necessariamente se chamar "users"</em>.<br>
 Após seguir estes passos você poderá prosseguir e implementar o sistema com sucesso em seu site.
 <hr>
 
@@ -52,4 +52,8 @@ A função usada para logar-se é:
 <pre>userLogin($name, $pass, true);</pre>ou<pre>userLogin($name, $pass, false);</pre>
 Onde <b>$name</b> é o nome de usuário, <b>$pass</b> é a senha de acesso, e <b>true</b>/<b>false</b> é o modo como ele será logado (cookies ou sessions).<br><b>true</b> equivale a login com cookies (o usuário permanecerá logado durante um mês, mesmo fechando o navegador).<br><b>false</b> equivale a login com sessions (o usuário ficará logado apenas enquanto o navegador estiver aberto).<br>
 Esta função retornará <i>true</i> ou <i>false</i>, caso seja true, significa que o usuário efetuou login com sucesso, caso seja false, os dados de acesso estão incorretos.<br>
-<h3>Como checar se o usuário está logado</h3>
+<h3>2.3 - Como checar se o usuário está logado</h3>
+A função usada para verificar se o usuário está logado é:
+<pre>isLogged();</pre>
+Esta função é bastante simples e retornará true ou false.<br>Caso seja <b>true</b>, significa que o usuário está logado, e caso seja <b>false</b>, o usuário não está logado.
+<h4>2.3.2 - Exibindo dados apenas para quem estiver logado</h4>
