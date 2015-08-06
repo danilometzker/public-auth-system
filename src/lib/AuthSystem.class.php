@@ -49,6 +49,9 @@ class AuthSystem{
 	/* Register a user (sign up) */
 	/* Registra usuário */
 	public function userRegister($email, $name, $pass){
+		$email = mysqli_real_escape_string($this->nexus, $email);
+		$name = mysqli_real_escape_string($this->nexus, $name);
+		$pass = mysqli_real_escape_string($this->nexus, $pass);
 
 
 
