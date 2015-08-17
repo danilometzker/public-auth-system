@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'lib/AuthSystem.class.php';
 $auth = new AuthSystem("localhost", "root", "", "database"); /*host, username, password, database name*/
 ?>
