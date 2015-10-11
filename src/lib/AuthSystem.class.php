@@ -94,7 +94,7 @@ class AuthSystem{
 	/* Logs a user (sign in) */
 	/* Efetua login de usuário */
 	public function userLogin($name, $pass, $mode = false){
-			session_start();
+			@session_start();
 
 			$name = mysqli_real_escape_string($this->nexus, $name);
 			$pass = mysqli_real_escape_string($this->nexus, $pass);
@@ -124,7 +124,7 @@ class AuthSystem{
 	/* Is logged verification */
 	/* Verifica se usuário está logado */
 	public function isLogged(){
-		session_start();
+		@session_start();
 		if(isset($_SESSION['user']) || isset($_COOKIE['user'])){
             return true;
         }else{
@@ -135,7 +135,7 @@ class AuthSystem{
 	/* Logout a user */
 	/* Desloga o usuário */
 	public function logout(){
-		session_start();
+		@session_start();
         if(isset($_SESSION['user'])){
             session_destroy();
             return true;
