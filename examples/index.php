@@ -15,7 +15,7 @@ $auth = new AuthSystem("localhost", "root", "", "database"); /*host, username, p
   <h1>Sign in Example / Exemplo de Login</h1>
 
   
-  <?php if($isLogged = $auth->isLogged()): /* caso usuario esteja logado */ ?>
+  <?php if($auth->isLogged()): /* caso usuario esteja logado */ ?>
   
   <h2>Seja bem vindo <?php $auth->getName(true); ?>!</h2>
   Clique <a href="sair.php">aqui</a> para fazer logout
